@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<title>Form Validation</title>
+	</head>
+	<body>
+	
+		<section class="py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h1 class="text-center mb-5">Form Validation using Javascript</h1>		
+						
+						<form name="myform" method="post" action="abc.jsp" onclick="return myFunction()">
+							<div class="form-group mb-3">
+								<label class="mb-2 w-100"><b>Name</b></label>
+								<input id="inputName" class="w-100" type="text" name="name" value="abc" />
+								<span class="error"></span>
+							</div>
+							<div class="form-group mb-3">
+								<label class="mb-2 w-100"><b>Age</b></label>
+								<input id="inputAge" class="w-100" type="number" name="age" value="" />
+								<span class="error"></span>
+							</div>
+							<div class="form-group">
+								<button type="submit">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<script>
+			function myFunction() {
+				var inputName = document.myform.name.value;
+				console.log(inputName);
+				if(inputName.value == "") {
+					console.log("Invalid Input Name");
+				}
+			};
+			console.log(inputName);
+		</script>
+		
+	</body>
+</html>
