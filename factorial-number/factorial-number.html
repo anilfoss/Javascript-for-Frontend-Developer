@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<title>Random Number</title>
+	</head>
+	<body>
+	
+		<section class="py-5">
+			<div class="container">
+				<div class="row">
+					<div class="text-center col-sm-12">
+						<h1 class="mb-5">Generate Random Number</h1>
+						<p>Math.random() returns a random number between 0 (included) and 1 (excluded):</p>
+						<h2 id="demo1" class="d-table my-5 w-100"></h2>
+						<a class="btn btn-danger btn-lg d-table mx-auto mt-5" href="javascript:;" onclick="randomNumber1()">Generate</a>
+						
+						<hr class="my-5">
+						
+						<p>Math.floor(Math.random() * 11) returns a random integer between 0 and 10 (both included):</p>
+						<h2 id="demo2" class="d-table my-5 w-100"></h2>
+						<a class="btn btn-danger btn-lg d-table mx-auto mt-5" href="javascript:;" onclick="randomNumber2()">Generate</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<script>
+			var x = document.getElementById("demo1");
+			var y = document.getElementById("demo2");
+			
+			function randomNumber1() {
+				x.innerHTML = Math.random();
+			}
+			
+			function randomNumber2() {
+				// y.innerHtml = Math.floor( Math.random() * 11 );   // code is correct but not working
+				// document.getElementById("demo2").innerHTML = Math.floor(Math.random() * 51);
+				document.getElementById("demo2").innerHTML = Math.LN2;
+			} 
+		</script>
+		
+	</body>
+</html>
